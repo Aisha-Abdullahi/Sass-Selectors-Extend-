@@ -1,0 +1,60 @@
+/* default color */
+/* default border color */
+.text, div h2, div:nth-child(1) {
+  color: green;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+div {
+  display: table;
+  border: 2px solid red;
+  padding: 20px;
+}
+div h2 {
+  padding: 1rem;
+  border: 2px solid red;
+  width: 300px;
+  margin: 30px auto;
+}
+div .first-section {
+  display: table;
+}
+div .first-section .article-card {
+  margin: 1rem;
+  display: table-cell;
+}
+div .first-section .article-card:nth-child(odd) {
+  color: blue;
+  border: 2px solid green;
+  padding: 1rem;
+  font-size: 1rem;
+}
+div .first-section .article-card:nth-child(even) {
+  color: red;
+  border: 2px solid green;
+  padding: 1rem;
+  font-size: 1rem;
+}
+div .footer {
+  display: table;
+  margin-top: 20px;
+}
+div .footer .article-card {
+  color: green;
+  border: 2px solid blue;
+  padding: 1rem;
+  font-size: 1rem;
+  margin: 2rem;
+  display: table-cell;
+  font-size: 24px;
+}
+
+hr {
+  width: 40%;
+  font-weight: 700;
+  color: blue;
+  margin-top: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,79 @@
+/* default color */
+$color: #333;
+/* default border color */
+$border-color: #ccc;
+
+$color-primary: red;
+$color-secondary: green;
+$color-tertiary: blue;
+
+
+@mixin article-card($color, $border-color, $font-size: 1rem) {
+    color: $color;
+    border: 2px solid $border-color;
+    padding: 1rem;
+    font-size: $font-size;
+}
+
+.text {
+    color: $color-secondary;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+div {
+    display: table;
+    border: 2px solid $color-primary;
+    padding: 20px;
+
+    &:nth-child(1) {
+        @extend .text;
+    }
+
+    h2 {
+        @extend .text;
+        padding: 1rem;
+        border: 2px solid red;
+        width: 300px;
+        margin: 30px auto;
+    }
+
+    .first-section {
+        display: table;
+
+        .article-card {
+            margin: 1rem;
+            display: table-cell;
+
+            &:nth-child(odd) {
+                @include article-card($color-tertiary, $color-secondary);
+            }
+
+            &:nth-child(even) {
+                @include article-card($color-primary, $color-secondary);
+            }
+        }
+
+    }
+
+    .footer {
+        display: table;
+        margin-top: 20px;
+
+        .article-card {
+            @include article-card($color-secondary, $color-tertiary);
+            margin: 2rem;
+            display: table-cell;
+            font-size: 24px;
+        }
+    }
+
+}
+
+hr {
+    width: 40%;
+    font-weight: 700;
+    color: $color-tertiary;
+    margin-top: 0;
+
+}
